@@ -1,7 +1,7 @@
 const Person = require("../models/personModel");
 
 const findOne = async (food) => {
-  Person.find({
+  await Person.find({
     favouriteFood: food, // search query
   })
     .then((doc) => {

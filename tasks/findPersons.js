@@ -1,7 +1,7 @@
 const Person = require("../models/personModel");
 
 const findPersons = async (name) => {
-  Person.find({
+  await Person.find({
     name: { $regex: new RegExp(name, "i") }, // search query
   })
     .then((doc) => {
